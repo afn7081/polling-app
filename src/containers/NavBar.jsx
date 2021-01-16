@@ -1,0 +1,46 @@
+import React, { Fragment } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import {Link} from 'react-router-dom'
+import { logout } from '../store/actions';
+import Navbar from 'react-bootstrap/Navbar'
+
+
+import Nav from 'react-bootstrap/Nav'
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+export default function NavBar()
+{
+
+
+     const {isAuthenticated,user}=useSelector(state=>state.auth)
+     const dispatch=useDispatch();
+     const handleLogout=()=>{
+
+         dispatch(logout())
+     }
+  return  (<Fragment  >
+ <Navbar style={{backfaceVisibility:'20%'}} expand="lg" >
+  <Navbar.Brand >Δημοσκοπήσειςcd</Navbar.Brand>
+  <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
+    <Nav className="mr-auto">
+
+      <Nav.Link href="/">Home</Nav.Link>
+      {isAuthenticated&&<Nav.Link href='/poll/new'>New Poll</Nav.Link>}
+     {!isAuthenticated&&<Nav.Link href="/login">Login</Nav.Link>
+      }
+
+      {!isAuthenticated&&<Nav.Link href="/register">Register</Nav.Link>}
+      {isAuthenticated&&<Nav.Link onClick={()=>handleLogout()}>Logout</Nav.Link>}
+      
+
+    </Nav>
+</Navbar>
+</Fragment>);
+
+
+
+}
+

@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+body {
+  background: #1b262c;
+  font: 18px 'Ubuntu', Helvetica, Arial, sans-serif;
+  text-align: center;
+  color:#1b262c;
+   
+    
+}
+
+#pollContainer {
+  color:#fff;
+  max-width: 400px;
+  margin: 3em auto;
+  padding: 1.5em 5px;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.3);
+  position: relative;
+  background: lighten(#1b262c , 8%);
+  background-color:#1b262c  
+}
+
+#pollButtons ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;background-color:#1b262c  
+}
+
+#pollButtons li {
+  border: 1px solid #fff;
+  margin: 5px auto;
+  padding: 15px 0;
+  color: #fff;
+  width: 45%;
+  text-align: center;
+  background-color:#1b262c ;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+    
+}
+
+#pollButtons li:hover{
+  opacity: 50%;
+}
+ 
+
