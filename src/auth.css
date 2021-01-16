@@ -36,7 +36,7 @@ opacity: .95;
 /* Start form  attributes */
 form {
     width: 450px;
-    min-height: 500px;
+    min-height: 40%;
     height: auto;
     border-radius: 5px;
     margin: 2% auto;
@@ -332,4 +332,9 @@ button:hover {
       cursor: pointer;
       width: 150px;
       overflow: hidden;
+    }
+    .nav{
+      background: #C9FFBF;
+    background: -webkit-linear-gradient(to right, #581845, #900c3f);
+    background: linear-gradient(to right, #ff5733, #c70039);
     }

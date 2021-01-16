@@ -64,7 +64,7 @@ if(!isAuhenticated)return(<Redirect to='/login'/>)
     <div className="con">
     <header className="head-form">
       <h2>Add Poll</h2>
-      <p style={{color:'#6b778d'}}>Add Poll and get public opinion</p>
+      <p style={{color:'#6b778d'}}>Enter your question followed by options</p>
    </header>
    <div className="field-set">
      

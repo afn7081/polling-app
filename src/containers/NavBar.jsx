@@ -3,12 +3,11 @@ import { useDispatch, useSelector } from 'react-redux'
 import {Link} from 'react-router-dom'
 import { logout } from '../store/actions';
 import Navbar from 'react-bootstrap/Navbar'
-
+import {NavDropdown} from 'react-bootstrap'
 
 import Nav from 'react-bootstrap/Nav'
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-
+import '../auth.css'
 
 export default function NavBar()
 {
@@ -20,8 +19,10 @@ export default function NavBar()
 
          dispatch(logout())
      }
-  return  (<Fragment  >
- <Navbar style={{backfaceVisibility:'20%'}} expand="lg" >
+  return  (<Fragment className="nav" >
+ <Navbar variant='dark' bg='dark' style={{  background: "#C9FFBF",
+    background: "-webkit-linear-gradient(to right, #581845, #272a2b)",
+    background: "linear-gradient(to right, #262c4b, #581845)"}}  expand="lg" >
   <Navbar.Brand >Δημοσκοπήσειςcd</Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
@@ -33,10 +34,17 @@ export default function NavBar()
       }
 
       {!isAuthenticated&&<Nav.Link href="/register">Register</Nav.Link>}
-      {isAuthenticated&&<Nav.Link onClick={()=>handleLogout()}>Logout</Nav.Link>}
       
-
+      
+ 
     </Nav>
+    {isAuthenticated&&<NavDropdown title={user.username} id="basic-nav-dropdown">
+      <NavDropdown.Item href="/">Polls</NavDropdown.Item>
+        <NavDropdown.Item onClick={()=>handleLogout()} >Logout</NavDropdown.Item>
+        
+     
+      </NavDropdown>
+    }
 </Navbar>
 </Fragment>);
 
