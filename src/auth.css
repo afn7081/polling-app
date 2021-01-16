@@ -217,9 +217,8 @@ button:hover {
     }
     .tilesWrap li {
       display: inline-block;
-      width: 10%;
-      height: 20%;
-      min-width: 100px;
+      width: 20%;
+      min-width: 200px;
       max-width: 230px;
       padding: 80px 20px 40px;
       position: relative;
@@ -230,6 +229,7 @@ button:hover {
       background: #262a2b;
       border: 1px solid #252727;
       text-align: left;
+    }
     }
     .tilesWrap li h2 {
       font-size: 114px;
