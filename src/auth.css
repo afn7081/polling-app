@@ -217,8 +217,9 @@ button:hover {
     }
     .tilesWrap li {
       display: inline-block;
-      width: 20%;
-      min-width: 200px;
+      width: 10%;
+      height: 20%;
+      min-width: 100px;
       max-width: 230px;
       padding: 80px 20px 40px;
       position: relative;
